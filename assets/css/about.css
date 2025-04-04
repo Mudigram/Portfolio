@@ -1,0 +1,221 @@
+/* General Page Styling */
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: #111;
+    color: rgb(241, 146, 14);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #222;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    z-index: 1001; /* Higher than the nav */
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(227, 132, 7);
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: rgb(237, 112, 16);
+}
+
+.hamburger {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* ✅ About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* ✅ Skills Section */
+.skills {
+    text-align: center;
+    padding: 40px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #222;
+    padding: 20px;
+}
+
+.skill {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+.skill:hover {
+    transform: scale(1.1);
+    background: #0056b3;
+}
+
+.about-container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

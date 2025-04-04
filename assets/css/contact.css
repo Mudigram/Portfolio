@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212; /* Dark background for consistency */
+    color: #e0e0e0; /* Light gray text for readability */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+header {
+    background-color: #101010; /* Darker navbar background */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #ff9800; /* Accent color for logo */
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #e0e0e0; /* Light gray for links */
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff9800; /* Accent color on hover */
+}
+
+.hamburger {
+    display: none; /* Hide hamburger menu for now */
+}
+
+/* Main Content */
+.contact-simple {
+    text-align: center;
+    padding: 80px 20px;
+    flex: 1; /* Ensure main content takes up available space */
+}
+
+.contact-simple h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9800; /* Accent color for headings */
+}
+
+.contact-simple p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #bdbdbd; /* Softer gray for paragraph text */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-icons {
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    margin: 0 15px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #ff9800; /* Accent color for links */
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #e0e0e0; /* Light gray on hover */
+}
+
+.contact-icons img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(100%);
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+
+.flying-bird {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.flying-bird img {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 80px;
+    animation: flyAcross 8s linear infinite;
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #101010; /* Darker footer background */
+    color: #bdbdbd; /* Softer gray for footer text */
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer a {
+    color: #ff9800; /* Accent color for footer links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #e0e0e0; /* Light gray on hover */
+}
